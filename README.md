@@ -4,7 +4,7 @@ Here’s a *README.md theory section* you can copy and include in your GitHub pr
 
 ---
 
-## 📖 Theory - Simple Python Calculator
+##  Theory - Simple Python Calculator
 
 This project is a *console-based calculator* written in *Python* that performs basic arithmetic operations:
 
@@ -13,13 +13,13 @@ This project is a *console-based calculator* written in *Python* that performs b
 * Multiplication
 * Division
 
-### 🔧 Program Structure
+###  Program Structure
 
 The calculator is built using *functions, a **menu-driven loop, and **user input handling*.
 
 ---
 
-### ✅ Function Definitions
+###  Function Definitions
 
 The program defines four functions:
 
@@ -56,7 +56,7 @@ def divide(x, y):
 
 ---
 
-### 🔁 Loop and Menu
+###  Loop and Menu
 
 The main part of the program runs inside a while True loop that:
 
@@ -79,7 +79,7 @@ Select operation:
 
 ---
 
-### 🛡 Input Validation
+###  Input Validation
 
 The program includes basic error handling:
 
@@ -89,7 +89,7 @@ The program includes basic error handling:
 
 ---
 
-### 🧠 Key Concepts Used
+###  Key Concepts Used
 
 * *Functions*: To modularize code for reuse and clarity.
 * *Loops*: To keep the program running until the user exits.
@@ -98,7 +98,7 @@ The program includes basic error handling:
 
 ---
 
-### 💡 Example
+###  Example
 
 
 Enter choice (1/2/3/4/5): 1
@@ -110,3 +110,4 @@ Enter second number: 5
 ---
 
 Let me know if you want the full README file with installation instructions and usage examples too!
+
