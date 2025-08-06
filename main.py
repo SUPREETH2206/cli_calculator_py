@@ -1,74 +1,45 @@
-# Simple To-Do List Manager in Python
+def add(x, y):
+    return x + y
 
-# Store tasks in a list
-todo_list = []
+def subtract(x, y):
+    return x - y
 
-# Function to display menu
-def display_menu():
-    print("\n--- TO-DO LIST MANAGER ---")
-    print("1. Add Task")
-    print("2. View Tasks")
-    print("3. Mark Task as Done")
-    print("4. Delete Task")
-    print("5. Exit")
+def multiply(x, y):
+    return x * y
 
-# Function to add a task
-def add_task():
-    task = input("Enter a new task: ")
-    todo_list.append({"task": task, "done": False})
-    print("Task added successfully!")
+def divide(x, y):
+    if y == 0:
+        return "Error: Division by zero"
+    return x / y
 
-# Function to view all tasks
-def view_tasks():
-    if not todo_list:
-        print("No tasks in the list.")
-        return
-    print("\n--- TASKS ---")
-    for idx, item in enumerate(todo_list, start=1):
-        status = "✔️" if item["done"] else "❌"
-        print(f"{idx}. [{status}] {item['task']}")
-
-# Function to mark a task as done
-def mark_done():
-    view_tasks()
-    try:
-        task_no = int(input("Enter task number to mark as done: "))
-        if 1 <= task_no <= len(todo_list):
-            todo_list[task_no - 1]["done"] = True
-            print("Task marked as done!")
-        else:
-            print("Invalid task number.")
-    except ValueError:
-        print("Please enter a valid number.")
-
-# Function to delete a task
-def delete_task():
-    view_tasks()
-    try:
-        task_no = int(input("Enter task number to delete: "))
-        if 1 <= task_no <= len(todo_list):
-            removed_task = todo_list.pop(task_no - 1)
-            print(f"Deleted task: {removed_task['task']}")
-        else:
-            print("Invalid task number.")
-    except ValueError:
-        print("Please enter a valid number.")
-
-# Main program loop
 while True:
-    display_menu()
-    choice = input("Choose an option (1-5): ")
-
-    if choice == "1":
-        add_task()
-    elif choice == "2":
-        view_tasks()
-    elif choice == "3":
-        mark_done()
-    elif choice == "4":
-        delete_task()
-    elif choice == "5":
-        print("Exiting To-Do List Manager. Goodbye!")
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+    
+    choice = input("Enter choice (1/2/3/4/5): ")
+    
+    if choice == '5':
         break
+    
+    if choice in ('1', '2', '3', '4'):
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+        except ValueError:
+            print("Invalid input. Please enter numeric values.")
+            continue
+
+        if choice == '1':
+            print(f"{num1} + {num2} = {add(num1, num2)}")
+        elif choice == '2':
+            print(f"{num1} - {num2} = {subtract(num1, num2)}")
+        elif choice == '3':
+            print(f"{num1} * {num2} = {multiply(num1, num2)}")
+        elif choice == '4':
+            print(f"{num1} / {num2} = {divide(num1, num2)}")
     else:
-        print("Invalid choice. Please enter a number from 1 to 5.")
+        print("Invalid Input")
